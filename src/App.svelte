@@ -246,7 +246,7 @@
     <Project
       img={EkaasV1}
       isDone={true}
-      title="Ease to Use Class Finance Manager for Students V1"
+      title="Ekaas V1 - Class Finance Manager for Students"
     />
     <Project
       img={Tokopedia}
