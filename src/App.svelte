@@ -5,6 +5,8 @@
   import Github from "./components/Github.svelte";
   import Youtube from "./components/Youtube.svelte";
   import Twitter from "./components/Twitter.svelte";
+  import Icon from "./components/Icon.svelte";
+  import icon from "./components/Icon.svelte";
   import MathITS from "./assets/math23.png";
   import Project from "./components/Project.svelte";
   import ZiruiDev from "./assets/ziruidev.png";
@@ -152,11 +154,25 @@
         >Available for new opportunities</span
       >
     </div>
-    <div class="flex gap-8">
-      <Linkedin size="28"></Linkedin>
-      <Github size="28"></Github>
-      <Youtube size="28"></Youtube>
-      <Twitter size="28"></Twitter>
+    <div class="group flex gap-8 relative">
+      <Icon
+        link="https://www.linkedin.com/in/yudha-sugiharto-programmer"
+        name="Linkedin"
+      >
+        <Linkedin size="28" slot="icon"></Linkedin>
+      </Icon>
+      <Icon link="https://github.com/ziruiproject" name="Github">
+        <Github size="28" slot="icon"></Github>
+      </Icon>
+      <Icon
+        link="https://www.youtube.com/channel/UCfwlc3f9iDEIFlzSNQLkReA"
+        name="Youtube"
+      >
+        <Youtube size="28" slot="icon"></Youtube>
+      </Icon>
+      <Icon link="https://twitter.com/yutprw" name="Twitter">
+        <Twitter size="28" slot="icon"></Twitter>
+      </Icon>
     </div>
     <div class="flex flex-col gap-5 w-11/12 text-center">
       <button
