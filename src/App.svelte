@@ -15,8 +15,8 @@
 </script>
 
 <main class="flex flex-col py-8 w-screen">
-  <nav class="bg-dark-gray absolute w-screen bottom-0 p-4">
-    <ul>
+  <nav class="bg-primary fixed w-screen bottom-0 p-4 border-t-light-gray">
+    <ul class="flex justify-center gap-8">
       <li>
         <svg
           xmlns="http://www.w3.org/2000/svg"
