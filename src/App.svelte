@@ -97,9 +97,20 @@
       >
     </div>
   </div>
-  <div class="py-12 w-11/12">
-    <p class="font-normal text-white-text">
+  <div class="py-12 flex flex-col w-11/12 self-center h-full">
+    <p class="font-normal text-white-text text-xl">
       I’m Yudha Prawira Sugiharto, a Web Developer based on Surabaya, Indonesia
+      <br /> <br />
+      With almost 3 years in the game. I'm all about bringing ideas to life on the
+      web. Whether it's crafting sleek front-end interfaces or diving into the nitty-gritty
+      of back-end development, I'm up for the challenge.
+      <br /> <br />
+      I'm the kind of developer who enjoys a good coding challenge and is always
+      on the lookout for the next cool thing in tech. If you're after someone who
+      can balance a knack for clean code with a laid-back attitude, I'm your person.
+      <br /> <br />
+      Let's build something awesome together!
     </p>
   </div>
+  <div></div>
 </main>
