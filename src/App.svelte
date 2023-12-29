@@ -8,14 +8,14 @@
   import Button from "./components/Button.svelte";
 </script>
 
-<main class="place-content-center place-items-center grid py-8">
-  <div class="place-items-center grid gap-6">
+<main class="flex flex-col py-8 w-screen">
+  <div class="flex flex-col items-center gap-6">
     <span class="text-light-gray text-base font-thin">16:39</span>
-    <img src={profileImg} alt="profile" width="125" />
-    <h1 class="text-3xl font-semibold text-white">Yudha Sugiharto</h1>
+    <img src={profileImg} alt="profile" width="100" />
+    <h1 class="text-3xl font-normal text-white">Yudha Sugiharto</h1>
   </div>
-  <div class="place-items-center place-content-center grid gap-8">
-    <span class="text-light-gray text-xl font-normal"
+  <div class="flex flex-col items-center gap-7">
+    <span class="text-light-gray text-2xl font-normal pt-1"
       >Freelance Web Developer</span
     >
     <div class="flex items-center align-middle">
@@ -28,21 +28,21 @@
       >
         <circle cx="6" cy="6" r="6" fill="#2DD293" />
       </svg>
-      <span class="text-light-gray pl-2 text-xl font-normal"
+      <span class="text-light-gray pl-2 text-xl font-light -mb-1"
         >Available for new opportunities</span
       >
     </div>
-    <div class="grid grid-cols-4 gap-6">
-      <Linkedin size="32"></Linkedin>
-      <Github size="32"></Github>
-      <Youtube size="32"></Youtube>
-      <Twitter size="32"></Twitter>
+    <div class="flex gap-8">
+      <Linkedin size="28"></Linkedin>
+      <Github size="28"></Github>
+      <Youtube size="28"></Youtube>
+      <Twitter size="28"></Twitter>
     </div>
-    <div class=" place-content-center place-items-center grid gap-5">
+    <div class="flex flex-col gap-5 w-11/12 text-center">
       <button
-        class="text-dark-gray flex items-center px-16 py-4 bg-white rounded-[10px]"
+        class="text-dark-gray flex justify-center items-center px-12 py-3 bg-white rounded-[10px]"
       >
-        <span class="pr-2 -mb-1 text-2xl font-medium">Contact Me</span>
+        <span class="pr-2 -mb-1 text-xl font-medium">Contact Me</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -66,9 +66,9 @@
       </button>
       <span class="text-light-gray pl-2 text-xl font-normal"> or </span>
       <button
-        class="flex items-center px-16 py-4 text-white-text bg-dark-gray rounded-[10px]"
+        class="flex items-center px-12 py-3 justify-center text-white-text bg-dark-gray rounded-[10px]"
       >
-        <span class="pr-2 -mb-1 text-2xl font-medium">Copy Email</span>
+        <span class="pr-2 -mb-1 text-xl font-medium">Copy Email</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -96,5 +96,10 @@
         >Surabaya, Indonesia</span
       >
     </div>
+  </div>
+  <div class="py-12 w-11/12">
+    <p class="font-normal text-white-text">
+      I’m Yudha Prawira Sugiharto, a Web Developer based on Surabaya, Indonesia
+    </p>
   </div>
 </main>
