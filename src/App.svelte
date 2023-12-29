@@ -233,7 +233,7 @@
     </p>
   </div>
   <div
-    class="py-4 flex flex-col w-11/12 self-center h-full text-white-text gap-6"
+    class="pt-4 pb-24 flex flex-col w-11/12 self-center h-full text-white-text gap-6"
   >
     <Project img={MathITS} isDone={true} title="Mathematics ITS 2023 Website" />
     <Project img={ZiruiDev} isDone={true} title="Zirui Dev Company Profile" />
@@ -253,5 +253,25 @@
       isDone={false}
       title="Tokopedia Clone (e-commerce)"
     />
+    <button
+      class="flex items-center px-12 py-3 justify-center text-white-text bg-dark-gray rounded-[10px]"
+    >
+      <span class="pr-2 -mb-1 text-xl font-medium">View More</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M3 12H21M21 12L12.5 3.5M21 12L12.5 20.5"
+          stroke="#8F8F8F"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
   </div>
 </main>
