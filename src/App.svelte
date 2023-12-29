@@ -1,17 +1,20 @@
 <script>
   import "./app.css";
-  import profileImg from "./assets/person.png";
+  import ProfileImg from "./assets/person.png";
   import Linkedin from "./components/Linkedin.svelte";
   import Github from "./components/Github.svelte";
   import Youtube from "./components/Youtube.svelte";
   import Twitter from "./components/Twitter.svelte";
-  import Button from "./components/Button.svelte";
+  import MathITS from "./assets/math23.png";
+  import Project from "./components/Project.svelte";
+  import ZiruiDev from "./assets/ziruidev.png";
+  import SecScanner from "./assets/security-scanner.png";
 </script>
 
 <main class="flex flex-col py-8 w-screen">
   <div class="flex flex-col items-center gap-6">
     <span class="text-light-gray text-base font-thin">16:39</span>
-    <img src={profileImg} alt="profile" width="100" />
+    <img src={ProfileImg} alt="profile" width="100" />
     <h1 class="text-3xl font-normal text-white">Yudha Sugiharto</h1>
   </div>
   <div class="flex flex-col items-center gap-7">
@@ -112,5 +115,13 @@
       Let's build something awesome together!
     </p>
   </div>
-  <div></div>
+  <div
+    class="py-4 flex flex-col w-11/12 self-center h-full text-white-text gap-6"
+  >
+    <Project img={MathITS} isDone={true} title="Mathematics ITS 2023 Website" />
+    <Project img={ZiruiDev} isDone={true} title="Zirui Dev Company Profile" />
+    <Project img={SecScanner} isDone={true} title="PJKP SAS Security System" />
+    <Project img={SecScanner} isDone={true} title="PJKP SAS Security System" />
+    <Project img={SecScanner} isDone={true} title="PJKP SAS Security System" />
+  </div>
 </main>
