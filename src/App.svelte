@@ -92,6 +92,9 @@
           />
         </svg>
       </button>
+      <span class="text-light-gray text-base font-thin"
+        >Surabaya, Indonesia</span
+      >
     </div>
   </div>
 </main>
