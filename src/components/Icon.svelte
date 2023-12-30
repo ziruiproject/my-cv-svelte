@@ -14,7 +14,7 @@
 <main>
     <a
         href={link}
-        class="relative group"
+        class="relative"
         on:mouseenter={handleMouseEnter}
         on:mouseleave={handleMouseLeave}
     >
@@ -23,6 +23,8 @@
         {#if isHovered}
             <span
                 class="bg-dark-gray text-lg px-4 rounded-[10px] absolute top-full left-1/2 transform -translate-x-1/2 p-2 bg-gray-800 text-white-text opacity-100 pointer-events-none transition-opacity duration-300"
+                role="tooltip"
+                aria-label={name}
             >
                 {name}
             </span>

@@ -162,7 +162,7 @@
         <Linkedin size="28" slot="icon"></Linkedin>
       </Icon>
       <Icon link="https://github.com/ziruiproject" name="Github">
-        <Github size="28" slot="icon"></Github>
+        <Github size="28" slot="icon" isHovered={false}></Github>
       </Icon>
       <Icon
         link="https://www.youtube.com/channel/UCfwlc3f9iDEIFlzSNQLkReA"
