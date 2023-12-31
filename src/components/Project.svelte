@@ -1,9 +1,12 @@
 <script>
     export let img, title, isDone;
+    let color = "#";
 </script>
 
 <main>
-    <div class="rounded-[10px] bg-dark-gray p-4">
+    <div
+        class="rounded-[10px] bg-dark-gray hover:bg-[#302f30] p-4 transition duration-200 hover:scale-[1.02]"
+    >
         <div class="flex items-center">
             {#if isDone}
                 <svg
@@ -81,7 +84,7 @@
                 </svg>
             {/if}
 
-            <h3 class="font-normal text-white-text text-xl -mb-1 pl-2">
+            <h3 class="font-normal text-white-text text-lg -mb-1 pl-2">
                 {title}
             </h3>
         </div>
