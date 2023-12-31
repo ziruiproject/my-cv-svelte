@@ -21,14 +21,14 @@
     // import Midtrans from "../assets/icons/midtrans_logo_negative.png";
 </script>
 
-<div class="w-11/12 flex flex-col self-center py-16">
+<div class="flex flex-col self-center w-11/12 py-16">
     <h1 class="text-3xl font-normal text-white border-none outline-none">
         Tech Stack
     </h1>
-    <span class="text-light-gray text-2xl font-normal pt-1 pb-16">
+    <span class="text-light-gray pt-1 pb-16 text-2xl font-normal">
         All technologies I use
     </span>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 grid-auto-rows: 1fr">
+    <div class="md:grid-cols-4 grid-auto-rows: 1fr grid grid-cols-2 gap-5">
         <Tech name="Firebase" subtitle="BaaS" img="/icons/firebase.svg" />
         <Tech
             name="Docker"
@@ -98,6 +98,18 @@
             subtitle="DBMS"
             img="/icons/mongodb.svg"
             width={90}
+        />
+        <Tech
+            name="NGINX"
+            subtitle="Web Server"
+            img="/icons/nginx.svg"
+            width={100}
+        />
+        <Tech
+            name="Apache"
+            subtitle="Web Server"
+            img="/icons/httpd.svg"
+            width={100}
         />
     </div>
 </div>
