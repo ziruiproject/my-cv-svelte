@@ -5,13 +5,13 @@
     export let size;
 
     const location = useLocation();
-    console.log($location.pathname);
+    $: page = $location.pathname;
 </script>
 
 <nav class="z-50 bg-primary fixed w-screen bottom-0 p-4 border-t-light-gray">
     <ul class="flex justify-center gap-16">
         <li>
-            <Icon atBottom={true} link="/" name="Home">
+            <Icon location={page} atBottom={true} link="/" name="Home">
                 <svg
                     slot="icon"
                     xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,12 @@
             </Icon>
         </li>
         <li>
-            <Icon atBottom={true} link="/stack" name="Tech Stack">
+            <Icon
+                location={page}
+                atBottom={true}
+                link="/stack"
+                name="Tech Stack"
+            >
                 <svg
                     slot="icon"
                     xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +82,7 @@
             </Icon>
         </li>
         <li>
-            <Icon atBottom={true} link="/about" name="About me">
+            <Icon location={page} atBottom={true} link="/about" name="About me">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={size}
@@ -102,7 +107,12 @@
             </Icon>
         </li>
         <li>
-            <Icon atBottom={true} link="/contact" name="Contact">
+            <Icon
+                location={page}
+                atBottom={true}
+                link="/contact"
+                name="Contact"
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={size}

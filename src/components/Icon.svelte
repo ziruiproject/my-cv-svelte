@@ -1,6 +1,7 @@
 <script>
     export let link,
         name,
+        location = "",
         atBottom = false;
     let isHovered = false;
 
@@ -15,7 +16,9 @@
 
 <a
     href={link}
-    class="relative stroke-light-gray hover:stroke-white-text duration-300"
+    class="{link === location
+        ? 'stroke-white-text'
+        : 'stroke-light-gray'} relative stroke-light-gray hover:stroke-white-text duration-300"
     on:mouseenter={handleMouseEnter}
     on:mouseleave={handleMouseLeave}
 >
