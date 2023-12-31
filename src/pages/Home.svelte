@@ -37,7 +37,9 @@
 <div class="flex flex-col items-center gap-6">
     <span class="text-light-gray text-base font-thin">{clock}</span>
     <img src={ProfileImg} alt="profile" width="100" />
-    <h1 class="text-3xl font-normal text-white">Yudha Sugiharto</h1>
+    <h1 class="text-3xl font-normal text-white border-none outline-none">
+        Yudha Sugiharto
+    </h1>
 </div>
 <div class="flex flex-col items-center gap-7">
     <span class="text-light-gray text-xl font-normal pt-1"
