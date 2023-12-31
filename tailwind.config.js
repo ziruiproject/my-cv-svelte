@@ -7,11 +7,11 @@ export default {
       'sans': ['rig-sans']
     },
     colors: {
-      'primary': '#201F20',
-      'white': '#FFFFFF',
-      'light-gray': '#8F8F8F',
+      'primary': '#232323',
+      'white': '#ededec',
+      'light-gray': '#707070',
       'white-text': '#D9D9D9',
-      'dark-gray': '#242324',
+      'dark-gray': '#282828',
       'green': '#2DD293'
     },
   },

@@ -8,7 +8,7 @@
     $: page = $location.pathname;
 </script>
 
-<nav class="z-50 bg-primary fixed w-screen bottom-0 p-4 border-t-light-gray">
+<nav class="z-50 bg-primary fixed w-screen bottom-0 p-4">
     <ul class="flex justify-center gap-16">
         <li>
             <Icon location={page} atBottom={true} link="/" name="Home">
