@@ -1,5 +1,8 @@
 <script>
-    export let name, img, subtitle;
+    export let name,
+        img,
+        subtitle,
+        width = 72;
 </script>
 
 <div
@@ -8,13 +11,15 @@
     <img
         src={img}
         alt="Visual Studio Code"
-        width="75"
+        {width}
         class="place-self-center py-10"
     />
-    <span class="text-light-gray text-lg">
-        {subtitle}
-    </span>
-    <h3 class="text-xl font-normal text-white border-none outline-none">
-        {name}
-    </h3>
+    <div class="flex flex-col justify-end">
+        <span class="text-light-gray text-lg">
+            {subtitle}
+        </span>
+        <h3 class="text-xl font-normal text-white border-none outline-none">
+            {name}
+        </h3>
+    </div>
 </div>
