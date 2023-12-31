@@ -1,6 +1,11 @@
 <script>
+    import { useLocation, useNavigate } from "svelte-navigator";
     import Icon from "./Icon.svelte";
+
     export let size;
+
+    const location = useLocation();
+    console.log($location.pathname);
 </script>
 
 <nav class="z-50 bg-primary fixed w-screen bottom-0 p-4 border-t-light-gray">
