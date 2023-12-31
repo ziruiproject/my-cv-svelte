@@ -6,7 +6,6 @@
   import Youtube from "./components/Youtube.svelte";
   import Twitter from "./components/Twitter.svelte";
   import Icon from "./components/Icon.svelte";
-  import icon from "./components/Icon.svelte";
   import MathITS from "./assets/math23.png";
   import Project from "./components/Project.svelte";
   import ZiruiDev from "./assets/ziruidev.png";
@@ -45,7 +44,7 @@
     <h1 class="text-3xl font-normal text-white">Yudha Sugiharto</h1>
   </div>
   <div class="flex flex-col items-center gap-7">
-    <span class="text-light-gray text-2xl font-normal pt-1"
+    <span class="text-light-gray text-xl font-normal pt-1"
       >Freelance Web Developer</span
     >
     <div class="flex items-center align-middle">
@@ -144,7 +143,7 @@
     </div>
   </div>
   <div class="py-12 flex flex-col w-11/12 self-center h-full">
-    <p class="font-normal text-white-text text-xl">
+    <p class="font-normal text-white-text text-lg">
       I’m Yudha Prawira Sugiharto, a Web Developer based on Surabaya, Indonesia
       <br /> <br />
       With almost 3 years in the game. I'm all about bringing ideas to life on the
