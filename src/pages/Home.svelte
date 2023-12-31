@@ -15,6 +15,7 @@
     import { onMount } from "svelte";
 
     let date = new Date();
+    $: isCopied = false;
 
     $: hour = date.getHours().toString().padStart(2, "0");
     $: minute = date.getMinutes().toString().padStart(2, "0");
@@ -29,8 +30,12 @@
 
     function copyEmail() {
         const emailText = "yudhasugiharto.enterprise@gmail.com";
+        isCopied = true;
 
         navigator.clipboard.writeText(emailText);
+        setTimeout(() => {
+            isCopied = false;
+        }, 2000);
     }
 </script>
 
@@ -41,8 +46,8 @@
         Yudha Sugiharto
     </h1>
 </div>
-<div class="flex flex-col items-center gap-7">
-    <span class="text-light-gray text-xl font-normal pt-1"
+<div class="gap-7 flex flex-col items-center">
+    <span class="text-light-gray pt-1 text-xl font-normal"
         >Freelance Web Developer</span
     >
     <div class="flex items-center align-middle">
@@ -55,11 +60,11 @@
         >
             <circle cx="6" cy="6" r="6" fill="#2DD293" />
         </svg>
-        <span class="text-light-gray pl-2 text-xl font-light -mb-1"
+        <span class="text-light-gray pl-2 -mb-1 text-xl font-light"
             >Available for new opportunities</span
         >
     </div>
-    <div class="group flex gap-8 relative">
+    <div class="group relative flex gap-8">
         <Icon
             link="https://www.linkedin.com/in/yudha-sugiharto-programmer"
             name="Linkedin"
@@ -79,7 +84,7 @@
             <Twitter size="28" slot="icon"></Twitter>
         </Icon>
     </div>
-    <div class="flex flex-col gap-5 w-11/12 text-center">
+    <div class="flex flex-col w-11/12 gap-5 text-center">
         <a
             href="mailto:yudhasugiharto.enterprise@gmail.com"
             class="text-dark-gray flex justify-center items-center px-12 py-3 bg-white rounded-[10px]"
@@ -111,37 +116,58 @@
             on:click={copyEmail}
             class="flex items-center px-12 py-3 justify-center text-white-text bg-dark-gray rounded-[10px]"
         >
-            <span class="pr-2 -mb-1 text-xl font-medium">Copy Email</span>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-            >
-                <path
-                    d="M19.4 20H9.6C9.26863 20 9 19.7314 9 19.4V9.6C9 9.26863 9.26863 9 9.6 9H19.4C19.7314 9 20 9.26863 20 9.6V19.4C20 19.7314 19.7314 20 19.4 20Z"
-                    stroke="#D9D9D9"
+            {#if isCopied}
+                <span class="pr-2 -mb-1 text-xl font-medium">Copied!</span>
+                <svg
+                    width="24px"
+                    height="24px"
                     stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                />
-                <path
-                    d="M15 9V4.6C15 4.26863 14.7314 4 14.4 4H4.6C4.26863 4 4 4.26863 4 4.6V14.4C4 14.7314 4.26863 15 4.6 15H9"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                     stroke="#D9D9D9"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                />
-            </svg>
+                    ><path
+                        d="M5 13L9 17L19 7"
+                        stroke="#D9D9D9"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    ></path></svg
+                >
+            {:else}
+                <span class="pr-2 -mb-1 text-xl font-medium">Copy Email</span>
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                >
+                    <path
+                        d="M19.4 20H9.6C9.26863 20 9 19.7314 9 19.4V9.6C9 9.26863 9.26863 9 9.6 9H19.4C19.7314 9 20 9.26863 20 9.6V19.4C20 19.7314 19.7314 20 19.4 20Z"
+                        stroke="#D9D9D9"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                    <path
+                        d="M15 9V4.6C15 4.26863 14.7314 4 14.4 4H4.6C4.26863 4 4 4.26863 4 4.6V14.4C4 14.7314 4.26863 15 4.6 15H9"
+                        stroke="#D9D9D9"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            {/if}
         </button>
         <span class="text-light-gray text-base font-thin"
             >Surabaya, Indonesia</span
         >
     </div>
 </div>
-<div class="py-12 flex flex-col w-11/12 self-center h-full">
-    <p class="font-normal text-white-text text-lg">
+<div class="flex flex-col self-center w-11/12 h-full py-12">
+    <p class="text-white-text text-lg font-normal">
         I’m Yudha Prawira Sugiharto, a Web Developer based on Surabaya,
         Indonesia
         <br /> <br />
@@ -157,7 +183,7 @@
     </p>
 </div>
 <div
-    class="pt-4 pb-24 flex flex-col w-11/12 self-center h-full text-white-text gap-6"
+    class="text-white-text flex flex-col self-center w-11/12 h-full gap-6 pt-4 pb-24"
 >
     <Project img={MathITS} isDone={true} title="Mathematics ITS 2023 Website" />
     <Project img={ZiruiDev} isDone={true} title="Zirui Dev Company Profile" />
