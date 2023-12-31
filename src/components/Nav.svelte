@@ -4,7 +4,7 @@
 </script>
 
 <nav class="bg-primary fixed w-screen bottom-0 p-4 border-t-light-gray">
-    <ul class="flex justify-center gap-10">
+    <ul class="flex justify-center gap-16">
         <li>
             <Icon atBottom={true} link="/" name="Home">
                 <svg

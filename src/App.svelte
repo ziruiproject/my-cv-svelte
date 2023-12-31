@@ -15,12 +15,32 @@
   import EkaasV1 from "./assets/ekaasv1.png";
   import Tokopedia from "./assets/tokopedia-clone.png";
   import Nav from "./components/Nav.svelte";
+  import { onMount } from "svelte";
+
+  let date = new Date();
+
+  $: hour = date.getHours().toString().padStart(2, "0");
+  $: minute = date.getMinutes().toString().padStart(2, "0");
+
+  $: clock = hour + ":" + minute;
+
+  onMount(() => {
+    const interval = setInterval(() => {
+      date = new Date();
+    }, 1000);
+  });
+
+  function copyEmail() {
+    const emailText = "yudhasugiharto.enterprise@gmail.com";
+
+    navigator.clipboard.writeText(emailText);
+  }
 </script>
 
 <main class="flex flex-col py-8 w-screen">
-  <Nav size="32"></Nav>
+  <Nav size="28"></Nav>
   <div class="flex flex-col items-center gap-6">
-    <span class="text-light-gray text-base font-thin">16:39</span>
+    <span class="text-light-gray text-base font-thin">{clock}</span>
     <img src={ProfileImg} alt="profile" width="100" />
     <h1 class="text-3xl font-normal text-white">Yudha Sugiharto</h1>
   </div>
@@ -63,7 +83,8 @@
       </Icon>
     </div>
     <div class="flex flex-col gap-5 w-11/12 text-center">
-      <button
+      <a
+        href="mailto:yudhasugiharto.enterprise@gmail.com"
         class="text-dark-gray flex justify-center items-center px-12 py-3 bg-white rounded-[10px]"
       >
         <span class="pr-2 -mb-1 text-xl font-medium">Contact Me</span>
@@ -87,9 +108,10 @@
             stroke-width="1.5"
           />
         </svg>
-      </button>
+      </a>
       <span class="text-light-gray pl-2 text-xl font-normal"> or </span>
       <button
+        on:click={copyEmail}
         class="flex items-center px-12 py-3 justify-center text-white-text bg-dark-gray rounded-[10px]"
       >
         <span class="pr-2 -mb-1 text-xl font-medium">Copy Email</span>
