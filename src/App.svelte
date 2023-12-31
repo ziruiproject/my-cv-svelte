@@ -179,7 +179,8 @@
       isDone={false}
       title="Tokopedia Clone (e-commerce)"
     />
-    <button
+    <a
+      href="https://www.linkedin.com/in/yudha-sugiharto-programmer/details/projects"
       class="flex items-center px-12 py-3 justify-center text-white-text bg-dark-gray rounded-[10px]"
     >
       <span class="pr-2 -mb-1 text-xl font-medium">View More</span>
@@ -198,6 +199,6 @@
           stroke-linejoin="round"
         />
       </svg>
-    </button>
+    </a>
   </div>
 </main>
