@@ -17,6 +17,7 @@
     "vite": "^5.0.8"
   },
   "dependencies": {
-    "@sveltejs/adapter-auto": "^3.0.1"
+    "@sveltejs/adapter-auto": "^3.0.1",
+    "svelte-navigator": "^3.2.2"
   }
 }
