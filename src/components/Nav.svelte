@@ -8,8 +8,10 @@
     $: page = $location.pathname;
 </script>
 
-<nav class="z-50 bg-primary fixed w-screen bottom-0 p-4">
-    <ul class="flex justify-center gap-16">
+<nav
+    class="sm:pl-10 sm:flex sm:w-fit sm:h-screen sm:left-0 bg-primary fixed bottom-0 z-50 w-screen p-4"
+>
+    <ul class="sm:flex-col sm:items-center flex justify-center gap-16">
         <li>
             <Icon location={page} atBottom={true} link="/" name="Home">
                 <svg

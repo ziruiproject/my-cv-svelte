@@ -198,11 +198,6 @@
         isDone={true}
         title="Ekaas V1 - Class Finance Manager for Students"
     />
-    <Project
-        img={Tokopedia}
-        isDone={false}
-        title="Tokopedia Clone (e-commerce)"
-    />
     <a
         href="https://www.linkedin.com/in/yudha-sugiharto-programmer/details/projects"
         class="flex items-center px-12 py-3 justify-center text-white-text bg-dark-gray rounded-[10px]"
